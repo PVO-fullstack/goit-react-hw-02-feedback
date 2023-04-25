@@ -37,10 +37,7 @@ class FeedbackForm extends Component {
     return (
       <>
         <Section title="Please leave feedback">
-          <FeedbackOptions
-            options={['Good', 'Neutral', 'Bad']}
-            onLeaveFeedback={this.leaveFeedback}
-          />
+          <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.leaveFeedback} />
         </Section>
         {this.countTotalFeedback() !== 0 ? (
           <Section title="Statistics">
